@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
   --primary-color: #212529;
   --secondary-color: #6c757d;
   --tertiary-color: #ffffff;
+  --quaternary-color: #f4f4f4;
   --hover-color: #0d6efd;
+
+  --fonte-primaria: "Montserrat", serif;
+  --fonte-secundaria: "Open Sans", serif;
 }
 
 * {
@@ -12,31 +16,93 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .navbar {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: center;
   background-color: var(--primary-color);
-  padding: 30px;
+  padding: 1.25rem 0% 1.25rem 15%;
 }
 
 .navbar a {
   color: var(--tertiary-color);
-  margin: 0 25px;
+  padding: 0.625rem;
+  margin-right: 1.625rem;
   text-decoration: none;
-  font-family: "Montserrat", serif;
-  font-size: 18px;
+  font-family: var(--fonte-primaria);
+  font-size: 1.125rem;
   font-weight: 600;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 2px solid transparent; /* borda invisivel para nao alterar o tamanho do header no hover */
+  border: 0.125rem solid transparent;
 }
 
 .navbar a:hover {
   color: var(--hover-color);
   border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
+  border-width: 0.125rem;
+  border-radius: 0.3125rem;
   box-sizing: border-box;
   border-color: var(--hover-color);
+}
+
+#apresentacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 5% 15%;
+  gap: 50px;
+}
+.apresentacao__conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: justify;
+}
+
+.apresentacao__conteudo__titulo {
+  color: var(--primary-color);
+  font-family: var(--fonte-primaria);
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.apresentacao__conteudo__texto {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.apresentacao__imagem {
+  width: 50%;
+  border-radius: 50%;
+}
+
+#trajetoria {
+  background-color: var(--quaternary-color);
+  text-align: center;
+  padding: 2%;
+}
+
+.trajetoria__titulo {
+  font-family: var(--fonte-primaria);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding-bottom: 35px;
+}
+
+.trajetoria__texto {
+  font-family: var(--fonte-secundaria);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 0 10%;
 }
