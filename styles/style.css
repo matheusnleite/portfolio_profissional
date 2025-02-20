@@ -85,6 +85,29 @@ body {
   border-radius: 50%;
 }
 
+.secao-titulo {
+  font-family: var(--fonte-primaria);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding-bottom: 35px;
+}
+
+.secao-subtitulo {
+  font-family: var(--fonte-primaria);
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-bottom: 35px;
+}
+
+.secao-texto {
+  font-family: var(--fonte-secundaria);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 0 10%;
+}
+
 .carrossel {
   position: relative;
   width: 100%;
@@ -184,30 +207,11 @@ body {
   background-color: var(--quaternary-color);
 }
 
-.trajetoria__titulo {
-  font-family: var(--fonte-primaria);
-  font-weight: 600;
-  font-size: 2rem;
-  color: var(--primary-color);
-  padding-bottom: 35px;
-}
-
-.trajetoria__texto {
-  font-family: var(--fonte-secundaria);
-  font-weight: 400;
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  margin: 0 10%;
-}
-
 #curiosidade {
   background-color: var(--secondary-color);
 }
 
-.curiosidade__titulo {
-  font-family: var(--fonte-primaria);
-  font-weight: 600;
-  font-size: 2rem;
+#curiosidade h2 {
   color: var(--quaternary-color);
   padding-bottom: 4.5rem;
 }
@@ -228,19 +232,11 @@ body {
   color: var(--tertiary-color);
 }
 
-.curiosidade__container{
+.curiosidade__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
   align-items: center;
-}
-
-.curiosidade__subtitulo {
-  font-family: var(--fonte-primaria);
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding-bottom: 35px;
 }
 
 .curiosidade__texto {
@@ -257,6 +253,66 @@ body {
   margin: 30px 10%;
 }
 
-.curiosidade__imagem{
+.curiosidade__imagem {
   width: 100%;
+}
+
+#skills {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding-top: 5%;
+}
+
+#skills h2 {
+  color: var(--tertiary-color);
+  padding-bottom: 1.5rem;
+}
+
+#skills h3 {
+  color: var(--tertiary-color);
+}
+
+.skills__conteudo {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 2%;
+  background-color: var(--primary-color);
+}
+
+.hard-skills,
+.soft-skills {
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.habilidade {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.habilidade__nome {
+  font-family: var(--fonte-primaria);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--tertiary-color);
+}
+
+.barra-progresso {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progresso {
+  height: 100%;
+  width: 0%; /*começa com 0 para ser animada com o js*/
+  background-color: var(--hover-color);
+  border-radius: 5px;
+  transition: width 1.5s ease-in-out;
 }

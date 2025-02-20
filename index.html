@@ -10,7 +10,7 @@
     <head>
       <nav class="navbar">
         <a href="index.html">Home</a>
-        <a href="">Skills</a>
+        <a href="#skills">Skills</a>
         <a href="">Experience & Projects</a>
         <a href="">Contact</a>
         <a href="">Interactive Element</a>
@@ -21,7 +21,12 @@
         <div class="apresentacao__conteudo">
           <h1 class="apresentacao__conteudo__titulo">Quem sou eu?</h1>
           <p class="apresentacao__conteudo__texto">
-            Sou Matheus Leite, tenho 18 anos e sou estudante do 3º período de Sistemas de Informação na UFU. Apaixonado por tecnologia, escolhi este curso para melhorar minhas habilidades e adquirir mais conhecimento sobre esse universo que tanto admiro. Minha matéria preferida é Algoritmos e Programação e minha área de interesse é o Back-end.
+            Sou Matheus Leite, tenho 18 anos e sou estudante do 3º período de
+            Sistemas de Informação na UFU. Apaixonado por tecnologia, escolhi
+            este curso para melhorar minhas habilidades e adquirir mais
+            conhecimento sobre esse universo que tanto admiro. Minha matéria
+            preferida é Algoritmos e Programação e minha área de interesse é o
+            Back-end.
           </p>
         </div>
         <img
@@ -33,8 +38,8 @@
       <div class="carrossel">
         <div class="carrossel__interno">
           <section id="trajetoria" class="carrossel__item">
-            <h2 class="trajetoria__titulo">Minha trajetória</h2>
-            <p class="trajetoria__texto">
+            <h2 class="secao-titulo">Minha trajetória</h2>
+            <p class="secao-texto">
               Minha jornada começa quando eu era mais novo, e comecei a
               desenvolver meu interesse pelo mundo da tecnologia. A primeira
               coisa que aprendi foi a desenvolver usando HTML e CSS. Querendo
@@ -86,10 +91,10 @@
             </div>
           </section>
           <section id="curiosidade" class="carrossel__item">
-            <h2 class="curiosidade__titulo">Curiosidades</h2>
+            <h2 class="secao-titulo">Curiosidades</h2>
             <div class="curiosidade__conteudo">
               <div class="curiosidade__container">
-                <h3 class="curiosidade__subtitulo">Cubo Mágico</h3>
+                <h3 class="secao-subtitulo">Cubo Mágico</h3>
                 <p class="curiosidade__subtexto">
                   Sou apaixonado com desafios que exigem lógica e criatividade.
                   Enquanto resolvo um cubo mágico em menos de 1 minutos (minha
@@ -97,25 +102,37 @@
                   otimizar algoritmos – habilidades que uso diariamente em
                   problemas de programação.
                 </p>
-                <img class="curiosidade__imagem" src="assets/cubo-magico.png" alt="cubo-magico">
+                <img
+                  class="curiosidade__imagem"
+                  src="assets/cubo-magico.png"
+                  alt="cubo-magico"
+                />
               </div>
               <div class="curiosidade__container">
-                <h3 class="curiosidade__subtitulo">Sudoku</h3>
+                <h3 class="secao-subtitulo">Sudoku</h3>
                 <p class="curiosidade__subtexto">
                   Já o Sudoku me ajudou a desenvolver um bom racicínio lógico,
                   pois é um jogo que exige criatividade e o desenvolvimento de
                   estraégias por parte do jogador.
                 </p>
-                <img class="curiosidade__imagem" src="assets/sudoku.png" alt="sudoku">
+                <img
+                  class="curiosidade__imagem"
+                  src="assets/sudoku.png"
+                  alt="sudoku"
+                />
               </div>
               <div class="curiosidade__container">
-                <h3 class="curiosidade__subtitulo">Música</h3>
+                <h3 class="secao-subtitulo">Música</h3>
                 <p class="curiosidade__subtexto">
                   E quando preciso de um respiro? Pego meu violão e toco algumas
                   músicas, sendo essa minha outra paixão, que me ajuda a relaxar
                   e me desestressa.
                 </p>
-                <img class="curiosidade__imagem" src="assets/violao (1).png" alt="violao">
+                <img
+                  class="curiosidade__imagem"
+                  src="assets/violao (1).png"
+                  alt="violao"
+                />
               </div>
             </div>
           </section>
@@ -127,6 +144,57 @@
           &#10095;
         </button>
       </div>
+      <section id="skills">
+        <h2 class="secao-titulo">Minhas Skills</h2>
+        <div class="skills__conteudo">
+          <div class="hard-skills">
+            <h3 class="secao-subtitulo">Habilidades Técnicas</h3>
+            <!--Habilidades tecnicas-->
+            <div class="habilidade">
+              <div class="habilidade__nome">C</div>
+              <div class="barra-progresso">
+                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
+                <div class="progresso" data-progresso="90"></div>
+              </div>
+            </div>
+
+            <div class="habilidade">
+              <div class="habilidade__nome">HTML & CSS</div>
+              <div class="barra-progresso">
+                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
+                <div class="progresso" data-progresso="75"></div>
+              </div>
+            </div>
+
+            <div class="habilidade">
+              <div class="habilidade__nome">Javascript</div>
+              <div class="barra-progresso">
+                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
+                <div class="progresso" data-progresso="40"></div>
+              </div>
+            </div>
+
+            <div class="habilidade">
+              <div class="habilidade__nome">Redes</div>
+              <div class="barra-progresso">
+                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
+                <div class="progresso" data-progresso="70"></div>
+              </div>
+            </div>
+
+            <div class="habilidade">
+              <div class="habilidade__nome">Python</div>
+              <div class="barra-progresso">
+                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
+                <div class="progresso" data-progresso="30"></div>
+              </div>
+            </div>
+          </div>
+          <div class="soft-skills">
+            <h3 class="secao-subtitulo">Habilidades Interpessoais</h3>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="scripts/app.js"></script>
   </body>
