@@ -20,14 +20,114 @@
       <section id="apresentacao">
         <div class="apresentacao__conteudo">
           <h1 class="apresentacao__conteudo__titulo">Quem sou eu?</h1>
-          <p class="apresentacao__conteudo__texto">Sou Matheus Leite, 18 anos, estudante do 3º período de Sistemas de Informação na UFU. Apaixonado por tecnologia, escolhi o curso para melhorar minhas habilidades na área e adquirir mais conhecimento desse mundo que tanto gosto.</p>
+          <p class="apresentacao__conteudo__texto">
+            Sou Matheus Leite, tenho 18 anos e sou estudante do 3º período de Sistemas de Informação na UFU. Apaixonado por tecnologia, escolhi este curso para melhorar minhas habilidades e adquirir mais conhecimento sobre esse universo que tanto admiro. Minha matéria preferida é Algoritmos e Programação e minha área de interesse é o Back-end.
+          </p>
         </div>
-          <img class="apresentacao__imagem" src="assets/Imagem.jpg" alt="foto de perfil Matheus" />
+        <img
+          class="apresentacao__imagem"
+          src="assets/imagem-perfil.jpg"
+          alt="foto de perfil Matheus"
+        />
       </section>
-      <section id="trajetoria">
-        <h1 class="trajetoria__titulo">Minha trajetória</h1>
-        <p class="trajetoria__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, minima similique eaque cum quo, possimus doloremque accusamus adipisci odit itaque expedita? Dolore enim recusandae et dolores dicta ratione facilis sed!</p>
-      </section>
+      <div class="carrossel">
+        <div class="carrossel__interno">
+          <section id="trajetoria" class="carrossel__item">
+            <h2 class="trajetoria__titulo">Minha trajetória</h2>
+            <p class="trajetoria__texto">
+              Minha jornada começa quando eu era mais novo, e comecei a
+              desenvolver meu interesse pelo mundo da tecnologia. A primeira
+              coisa que aprendi foi a desenvolver usando HTML e CSS. Querendo
+              aprender cada vez mais, me formei no curso técnico de Redes de
+              Computadores no IFTM. Assim, desde cedo eu sabia que escolheria
+              uma faculdade na área de TI, e por isso estudei para passar na
+              faculdade de Sistemas de Informação na UFU, onde estou atualmente.
+            </p>
+            <div class="timeline-container">
+              <div class="timeline">
+                <div class="timeline__item">
+                  <div class="timeline__conteudo">
+                    <img
+                      class="carrossel__imagem"
+                      src="assets/html-css-logo.png"
+                      alt="logo-html-css"
+                    />
+                  </div>
+                </div>
+                <div class="timeline__divisor">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__conteudo">
+                    <img
+                      class="carrossel__imagem"
+                      src="assets/iftm-redes-logo.png"
+                      alt="logo-html-css"
+                    />
+                  </div>
+                </div>
+                <div class="timeline__divisor">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__conteudo">
+                    <img
+                      class="carrossel__imagem"
+                      src="assets/ufu-si-logo.png"
+                      alt="logo-html-css"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="curiosidade" class="carrossel__item">
+            <h2 class="curiosidade__titulo">Curiosidades</h2>
+            <div class="curiosidade__conteudo">
+              <div class="curiosidade__container">
+                <h3 class="curiosidade__subtitulo">Cubo Mágico</h3>
+                <p class="curiosidade__subtexto">
+                  Sou apaixonado com desafios que exigem lógica e criatividade.
+                  Enquanto resolvo um cubo mágico em menos de 1 minutos (minha
+                  melhor marca!), treino meu cérebro para enxergar padrões e
+                  otimizar algoritmos – habilidades que uso diariamente em
+                  problemas de programação.
+                </p>
+                <img class="curiosidade__imagem" src="assets/cubo-magico.png" alt="cubo-magico">
+              </div>
+              <div class="curiosidade__container">
+                <h3 class="curiosidade__subtitulo">Sudoku</h3>
+                <p class="curiosidade__subtexto">
+                  Já o Sudoku me ajudou a desenvolver um bom racicínio lógico,
+                  pois é um jogo que exige criatividade e o desenvolvimento de
+                  estraégias por parte do jogador.
+                </p>
+                <img class="curiosidade__imagem" src="assets/sudoku.png" alt="sudoku">
+              </div>
+              <div class="curiosidade__container">
+                <h3 class="curiosidade__subtitulo">Música</h3>
+                <p class="curiosidade__subtexto">
+                  E quando preciso de um respiro? Pego meu violão e toco algumas
+                  músicas, sendo essa minha outra paixão, que me ajuda a relaxar
+                  e me desestressa.
+                </p>
+                <img class="curiosidade__imagem" src="assets/violao (1).png" alt="violao">
+              </div>
+            </div>
+          </section>
+        </div>
+        <button class="carrossel__controle__prev" onclick="prevSection()">
+          &#10094;
+        </button>
+        <button class="carrossel__controle__next" onclick="nextSection()">
+          &#10095;
+        </button>
+      </div>
     </main>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
