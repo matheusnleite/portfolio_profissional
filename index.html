@@ -148,50 +148,113 @@
         <h2 class="secao-titulo">Minhas Skills</h2>
         <div class="skills__conteudo">
           <div class="hard-skills">
-            <h3 class="secao-subtitulo">Habilidades Técnicas</h3>
-            <!--Habilidades tecnicas-->
-            <div class="habilidade">
-              <div class="habilidade__nome">C</div>
-              <div class="barra-progresso">
-                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
-                <div class="progresso" data-progresso="90"></div>
+            <div class="carrossel-skills">
+              <div class="carrossel__interno-skills">
+                <div class="carrossel__item-skills">
+                  <div class="linguagens">
+                    <h3 class="secao-subtitulo">Linguagens de Programação</h3>
+                    <!--Habilidades tecnicas-->
+                    <div class="habilidade">
+                      <div class="habilidade__nome">C</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="90"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">HTML & CSS</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="75"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Javascript</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="40"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Python</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="30"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carrossel__item-skills">
+                  <div class="ferramentas">
+                    <h3 class="secao-subtitulo">
+                      Ferramentas de Desenvolvimento
+                    </h3>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Visual Studio Code</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="85"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Intellij</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="40"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Git</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="45"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carrossel__item-skills">
+                  <div class="tecnologias">
+                    <h3 class="secao-subtitulo">Tecnologias</h3>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Redes de Computadores</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="75"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Bootstrap</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="20"></div>
+                      </div>
+                    </div>
+                    <div class="habilidade">
+                      <div class="habilidade__nome">Linux</div>
+                      <div class="barra-progresso">
+                        <div class="progresso" data-progresso="70"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="habilidade">
-              <div class="habilidade__nome">HTML & CSS</div>
-              <div class="barra-progresso">
-                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
-                <div class="progresso" data-progresso="75"></div>
-              </div>
-            </div>
-
-            <div class="habilidade">
-              <div class="habilidade__nome">Javascript</div>
-              <div class="barra-progresso">
-                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
-                <div class="progresso" data-progresso="40"></div>
-              </div>
-            </div>
-
-            <div class="habilidade">
-              <div class="habilidade__nome">Redes</div>
-              <div class="barra-progresso">
-                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
-                <div class="progresso" data-progresso="70"></div>
-              </div>
-            </div>
-
-            <div class="habilidade">
-              <div class="habilidade__nome">Python</div>
-              <div class="barra-progresso">
-                <!--data-progresso: atributo criado para armazenar o tamanho da barra de progresso-->
-                <div class="progresso" data-progresso="30"></div>
-              </div>
+              <button
+                class="carrossel__controle__prev-skills"
+                onclick="prevSkill()"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carrossel__controle__next-skills"
+                onclick="nextSkill()"
+              >
+                &#10095;
+              </button>
             </div>
           </div>
           <div class="soft-skills">
             <h3 class="secao-subtitulo">Habilidades Interpessoais</h3>
+            <ul class="soft-skills__lista">
+              <li class="soft-skill">Escuta Ativa e Empatia</li>
+              <li class="soft-skill">Organização e Atenção aos Detalhes</li>
+              <li class="soft-skill">Persistência e Disciplina</li>
+              <li class="soft-skill">
+                Capacidade Analítica e Resolução de Problemas
+              </li>
+              <li class="soft-skill">Trabalho em Equipe e Colaboração</li>
+              <li class="soft-skill">Estabilidade Emocional e Autocontrole</li>
+            </ul>
           </div>
         </div>
       </section>
