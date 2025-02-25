@@ -282,7 +282,7 @@ body {
 .hard-skills,
 .soft-skills {
   padding: 20px;
-  width: 30%;
+  width: 50%;
   border-radius: 8px;
 }
 
@@ -316,7 +316,7 @@ body {
   transition: width 1.5s ease-in-out;
 }
 
-.carrossel-skills {
+.carrossel-hard-skills {
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -324,20 +324,20 @@ body {
   border-radius: 8px;
 }
 
-.carrossel__interno-skills {
+.carrossel__interno-hard-skills {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.carrossel__item-skills {
+.carrossel__item-hard-skills {
   min-width: 100%;
   box-sizing: border-box;
   text-align: center;
   padding-top: 1%;
 }
 
-.carrossel__controle__prev-skills,
-.carrossel__controle__next-skills {
+.carrossel__controle__prev-hard-skills,
+.carrossel__controle__next-hard-skills {
   position: absolute;
   top: 5%;
   transform: translateY(-50%);
@@ -350,16 +350,63 @@ body {
   z-index: 1;
 }
 
-.carrossel__controle__prev-skills {
+.carrossel__controle__prev-hard-skills {
   left: 10px;
 }
 
-.carrossel__controle__next-skills {
+.carrossel__controle__next-hard-skills {
   right: 10px;
 }
 
-.carrossel__controle__prev-skills:hover,
-.carrossel__controle__next-skills:hover {
+.carrossel__controle__prev-hard-skills:hover,
+.carrossel__controle__next-hard-skills:hover {
+  background-color: var(--hover-color);
+}
+
+.carrossel-soft-skills {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carrossel__interno-soft-skills {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel__item-soft-skills {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.carrossel__controle__prev-soft-skills,
+.carrossel__controle__next-soft-skills {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.carrossel__controle__prev-soft-skills {
+  left: 10px;
+}
+
+.carrossel__controle__next-soft-skills {
+  right: 10px;
+}
+
+.carrossel__controle__prev-soft-skills:hover,
+.carrossel__controle__next-soft-skills:hover {
   background-color: var(--hover-color);
 }
 
@@ -370,6 +417,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.soft-skills__texto {
+  font-family: var(--fonte-secundaria);
+  color: var(--tertiary-color);
+  text-align: justify;
+  padding: 0 10% 20px 10%;
 }
 
 .soft-skill {

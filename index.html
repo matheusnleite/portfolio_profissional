@@ -148,9 +148,9 @@
         <h2 class="secao-titulo">Minhas Skills</h2>
         <div class="skills__conteudo">
           <div class="hard-skills">
-            <div class="carrossel-skills">
-              <div class="carrossel__interno-skills">
-                <div class="carrossel__item-skills">
+            <div class="carrossel-hard-skills">
+              <div class="carrossel__interno-hard-skills">
+                <div class="carrossel__item-hard-skills">
                   <div class="linguagens">
                     <h3 class="secao-subtitulo">Linguagens de Programação</h3>
                     <!--Habilidades tecnicas-->
@@ -180,7 +180,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carrossel__item-skills">
+                <div class="carrossel__item-hard-skills">
                   <div class="ferramentas">
                     <h3 class="secao-subtitulo">
                       Ferramentas de Desenvolvimento
@@ -205,7 +205,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carrossel__item-skills">
+                <div class="carrossel__item-hard-skills">
                   <div class="tecnologias">
                     <h3 class="secao-subtitulo">Tecnologias</h3>
                     <div class="habilidade">
@@ -230,14 +230,14 @@
                 </div>
               </div>
               <button
-                class="carrossel__controle__prev-skills"
-                onclick="prevSkill()"
+                class="carrossel__controle__prev-hard-skills"
+                onclick="prevHardSkill()"
               >
                 &#10094;
               </button>
               <button
-                class="carrossel__controle__next-skills"
-                onclick="nextSkill()"
+                class="carrossel__controle__next-hard-skills"
+                onclick="nextHardSkill()"
               >
                 &#10095;
               </button>
@@ -245,16 +245,61 @@
           </div>
           <div class="soft-skills">
             <h3 class="secao-subtitulo">Habilidades Interpessoais</h3>
-            <ul class="soft-skills__lista">
-              <li class="soft-skill">Escuta Ativa e Empatia</li>
-              <li class="soft-skill">Organização e Atenção aos Detalhes</li>
-              <li class="soft-skill">Persistência e Disciplina</li>
-              <li class="soft-skill">
-                Capacidade Analítica e Resolução de Problemas
-              </li>
-              <li class="soft-skill">Trabalho em Equipe e Colaboração</li>
-              <li class="soft-skill">Estabilidade Emocional e Autocontrole</li>
-            </ul>
+            <div class="carrossel-soft-skills">
+              <div class="carrossel__interno-soft-skills">
+                <div class="carrossel__item-soft-skills">
+                  <ul class="soft-skills__lista">
+                    <li class="soft-skill">Escuta Ativa e Empatia</li>
+                    <li class="soft-skill">
+                      Organização e Atenção aos Detalhes
+                    </li>
+                    <li class="soft-skill">Persistência e Disciplina</li>
+                    <li class="soft-skill">
+                      Capacidade Analítica e Resolução de Problemas
+                    </li>
+                    <li class="soft-skill">Trabalho em Equipe e Colaboração</li>
+                    <li class="soft-skill">
+                      Estabilidade Emocional e Autocontrole
+                    </li>
+                  </ul>
+                </div>
+                <div class="carrossel__item-soft-skills">
+                  <p class="soft-skills__texto">
+                    Em projetos, a escuta ativa e a empatia são essenciais para
+                    entender as necessidades dos clientes e alinhar as
+                    expectativas da equipe.
+                  </p>
+                  <p class="soft-skills__texto">
+                    A organização e atenção aos detalhes garantem que cada etapa
+                    seja planejada e executada com precisão, minimizando erros e
+                    imprevistos.
+                  </p>
+                  <p class="soft-skills__texto">A persistência e disciplina mantêm o foco mesmo diante de
+                  desafios e prazos apertados, enquanto a capacidade analítica e
+                  a resolução de problemas permitem identificar riscos e propor
+                  soluções eficazes.</p>
+                  <p class="soft-skills__texto">O trabalho em equipe e a colaboração
+                  fomentam a troca de ideias e fortalecem o espírito de grupo, e
+                  a estabilidade emocional aliada ao autocontrole assegura
+                  decisões acertadas em momentos de pressão.</p>
+                  <p class="soft-skills__texto"> Juntas, essas
+                  habilidades criam um ambiente propício à inovação e à entrega
+                  de projetos de alta qualidade.</p>
+                </div>
+              </div>
+              <button
+                class="carrossel__controle__prev-soft-skills"
+                onclick="prevSoftSkill()"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carrossel__controle__next-soft-skills"
+                onclick="nextSoftSkill()"
+              >
+                &#10095;
+              </button>
+            </div>
           </div>
         </div>
       </section>

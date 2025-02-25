@@ -28,34 +28,66 @@ function prevSection() {
 
 // Carrossel dentro da div hard-skills
 
-let indiceAtualSkills = 0;
+let indiceAtualHardSkills = 0;
 
-function mostrarSkill(indice) {
-  const carrosselInternoSkills = document.querySelector(
-    ".carrossel__interno-skills"
+function mostrarHardSkill(indice) {
+  const carrosselInternoHardSkills = document.querySelector(
+    ".carrossel__interno-hard-skills"
   );
-  const totalItensSkills = document.querySelectorAll(
-    ".carrossel__item-skills"
+  const totalItensHardSkills = document.querySelectorAll(
+    ".carrossel__item-hard-skills"
   ).length;
 
-  if (indice >= totalItensSkills) {
-    indiceAtualSkills = 0;
+  if (indice >= totalItensHardSkills) {
+    indiceAtualHardSkills = 0;
   } else if (indice < 0) {
-    indiceAtualSkills = totalItensSkills - 1;
+    indiceAtualHardSkills = totalItensHardSkills - 1;
   } else {
-    indiceAtualSkills = indice;
+    indiceAtualHardSkills = indice;
   }
 
-  const offset = -indiceAtualSkills * 100;
-  carrosselInternoSkills.style.transform = `translateX(${offset}%)`;
+  const offset = -indiceAtualHardSkills * 100;
+  carrosselInternoHardSkills.style.transform = `translateX(${offset}%)`;
 }
 
-function nextSkill() {
-  mostrarSkill(indiceAtualSkills + 1);
+function nextHardSkill() {
+  mostrarHardSkill(indiceAtualHardSkills + 1);
 }
 
-function prevSkill() {
-  mostrarSkill(indiceAtualSkills - 1);
+function prevHardSkill() {
+  mostrarHardSkill(indiceAtualHardSkills - 1);
+}
+
+// Carrossel dentro da div soft-skills
+
+let indiceAtualSoftSkills = 0;
+
+function mostrarSoftSkill(indice) {
+  const carrosselInternoSoftSkills = document.querySelector(
+    ".carrossel__interno-soft-skills"
+  );
+  const totalItensSoftSkills = document.querySelectorAll(
+    ".carrossel__item-soft-skills"
+  ).length;
+
+  if (indice >= totalItensSoftSkills) {
+    indiceAtualSoftSkills = 0;
+  } else if (indice < 0) {
+    indiceAtualSoftSkills = totalItensSoftSkills - 1;
+  } else {
+    indiceAtualSoftSkills = indice;
+  }
+
+  const offset = -indiceAtualSoftSkills * 100;
+  carrosselInternoSoftSkills.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSoftSkill() {
+  mostrarSoftSkill(indiceAtualSoftSkills + 1);
+}
+
+function prevSoftSkill() {
+  mostrarSoftSkill(indiceAtualSoftSkills - 1);
 }
 
 //Barra de progresso da seção Skills
