@@ -90,7 +90,9 @@ body {
   font-weight: 600;
   font-size: 2rem;
   color: var(--primary-color);
+  padding-top: 5%;
   padding-bottom: 35px;
+  text-align: center;
 }
 
 .secao-subtitulo {
@@ -125,7 +127,6 @@ body {
   min-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding-top: 5%;
 }
 
 .carrossel__item img {
@@ -259,7 +260,6 @@ body {
 #skills {
   background-color: var(--primary-color);
   text-align: center;
-  padding-top: 5%;
 }
 
 #skills h2 {
@@ -293,7 +293,7 @@ body {
 
 .habilidade__nome {
   font-family: var(--fonte-primaria);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.2rem;
   margin-bottom: 5px;
   color: var(--tertiary-color);
@@ -386,7 +386,7 @@ body {
 .carrossel__controle__prev-soft-skills,
 .carrossel__controle__next-soft-skills {
   position: absolute;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
   background-color: var(--primary-color);
   color: white;
@@ -441,4 +441,91 @@ body {
 .soft-skill.visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+.projetos {
+  display: flex;
+  padding: 2%;
+}
+
+.projetos .projetos__projeto {
+  flex: 1;
+  padding: 50px 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 15px 6px 4px var(--primary-color);
+  border-width: 5px;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+.projetos__projeto {
+  text-align: center;
+  width: 100%;
+  margin: 0 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projetos__projeto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.projetos__projeto p,
+img {
+  margin-bottom: 5%;
+}
+
+.projetos__descricao {
+  font-family: var(--fonte-secundaria);
+  columns: var(--primary-color);
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 90%;
+}
+
+.projetos__tecnologia h4 {
+  font-family: var(--fonte-primaria);
+}
+
+.projetos__tecnologia__lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.projetos__tecnologia__lista__item {
+  font-family: var(--fonte-secundaria);
+  color: var(--tertiary-color);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: var(--hover-color);
+  margin: 13px 5px 0 5px;
+  border-radius: 8px;
+}
+
+.projetos__botoes {
+  display: flex;
+  padding: 5% 0 0 0;
+}
+
+.projetos__botoes__botao {
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 20px 50px;
+  margin: 0 5px 0 5px;
+  border-radius: 50px;
+}
+
+.projetos__botoes__botao:hover {
+  background-color: var(--hover-color);
 }
