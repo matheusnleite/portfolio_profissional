@@ -6,6 +6,7 @@
   --tertiary-color: #ffffff;
   --quaternary-color: #f4f4f4;
   --hover-color: #0d6efd;
+  --social-media-hover-color: #808080;
 
   --fonte-primaria: "Montserrat", serif;
   --fonte-secundaria: "Open Sans", serif;
@@ -106,7 +107,6 @@ body {
   font-family: var(--fonte-secundaria);
   font-weight: 400;
   font-size: 1.3rem;
-  color: var(--primary-color);
   margin: 0 10%;
 }
 
@@ -205,6 +205,7 @@ body {
 
 #trajetoria {
   background-color: var(--quaternary-color);
+  color: var(--primary-color);
 }
 
 #curiosidade {
@@ -229,7 +230,7 @@ body {
   margin: 20px;
   border-radius: 8px;
   background-color: var(--hover-color);
-  color: var(--tertiary-color);
+  color: var (--tertiary-color);
 }
 
 .curiosidade__container {
@@ -407,7 +408,7 @@ body {
 
 .carrossel__controle__prev-soft-skills:hover,
 .carrossel__controle__next-soft-skills:hover {
-  background-color: var(--hover-color);
+  background-color: var (--hover-color);
 }
 
 .soft-skills__lista {
@@ -499,7 +500,7 @@ img {
 }
 
 .projetos__tecnologia__lista__item {
-  font-family: var(--fonte-secundaria);
+  font-family: var (--fonte-secundaria);
   color: var(--tertiary-color);
   font-weight: 500;
   font-size: 1rem;
@@ -527,5 +528,70 @@ img {
 }
 
 .projetos__botoes__botao:hover {
+  background-color: var(--hover-color);
+}
+
+#contact {
+  background-color: var(--quaternary-color);
+}
+
+#contact h2 {
+  color: var(--primary-color);
+}
+
+.redes-contato {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.redes-contato a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.redes-contato__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px;
+  padding: 20px 50px;
+  width: 100px;
+  border-width: 10px;
+  border: 5px solid transparent;
+}
+
+.redes-contato__item a:hover {
+  border: 5px solid var(--social-media-hover-color);
+  border-radius: 50px;
+  color: var(--social-media-hover-color);
+}
+
+.redes-contato__imagem {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 1000;
+}
+
+#back-to-top img {
+  width: 24px;
+  height: 24px;
+}
+
+#back-to-top:hover {
   background-color: var(--hover-color);
 }

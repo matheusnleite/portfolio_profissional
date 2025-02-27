@@ -148,3 +148,38 @@ const observerSoftSkills = new IntersectionObserver((entries) => {
 document.querySelectorAll(".soft-skill").forEach((skill) => {
   observerSoftSkills.observe(skill);
 });
+
+//    MUDAR IMAGEM DAS REDES SOCIAIS
+
+document.querySelectorAll(".redes-contato__item a").forEach((Link) => {
+  Link.addEventListener("mouseover", function () {
+    const newImgSrc = this.getAttribute("data-newImg");
+    const imgElement = this.querySelector(".redes-contato__imagem");
+    imgElement.src = newImgSrc;
+  });
+
+  //voltar ao padrao
+
+  Link.addEventListener("mouseout", function () {
+    const defaultImgSrc = this.getAttribute("data-defaultImg");
+    const imgElement = this.querySelector(".redes-contato__imagem");
+    imgElement.src = defaultImgSrc;
+  });
+});
+
+// Função para rolar a página até o topo
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Mostrar ou esconder o botão de voltar ao topo
+window.addEventListener("scroll", function () {
+  const backToTopButton = document.getElementById("back-to-top");
+  const apresentacaoSection = document.getElementById("apresentacao");
+
+  if (window.scrollY > apresentacaoSection.offsetHeight) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
