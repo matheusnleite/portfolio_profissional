@@ -1,94 +1,42 @@
-// Carrossel
+//CARROSSEL
 
-let indiceAtual = 0;
-
-function mostrarSection(indice) {
-  const carrosselInterno = document.querySelector(".carrossel__interno");
-  const totalItens = document.querySelectorAll(".carrossel__item").length;
-
+function mostrarCarrossel(indice, carrosselInterno, totalItens) {
   if (indice >= totalItens) {
-    indiceAtual = 0;
+    indice = 0;
   } else if (indice < 0) {
-    indiceAtual = totalItens - 1;
-  } else {
-    indiceAtual = indice;
+    indice = totalItens - 1;
   }
 
-  const offset = -indiceAtual * 100;
+  const offset = -indice * 100;
   carrosselInterno.style.transform = `translateX(${offset}%)`;
+  return indice;
 }
 
-function nextSection() {
-  mostrarSection(indiceAtual + 1);
-}
+document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
+  let indiceAtual = 0;
+  const carrosselInterno = carrossel.querySelector("[data-carrossel-interno]");
+  const totalItens = carrossel.querySelectorAll("[data-carrossel-item]").length;
 
-function prevSection() {
-  mostrarSection(indiceAtual - 1);
-}
+  carrossel
+    .querySelector("[data-carrossel-prev]")
+    .addEventListener("click", () => {
+      indiceAtual = mostrarCarrossel(
+        indiceAtual - 1,
+        carrosselInterno,
+        totalItens
+      );
+    });
 
-// Carrossel dentro da div hard-skills
-
-let indiceAtualHardSkills = 0;
-
-function mostrarHardSkill(indice) {
-  const carrosselInternoHardSkills = document.querySelector(
-    ".carrossel__interno-hard-skills"
-  );
-  const totalItensHardSkills = document.querySelectorAll(
-    ".carrossel__item-hard-skills"
-  ).length;
-
-  if (indice >= totalItensHardSkills) {
-    indiceAtualHardSkills = 0;
-  } else if (indice < 0) {
-    indiceAtualHardSkills = totalItensHardSkills - 1;
-  } else {
-    indiceAtualHardSkills = indice;
-  }
-
-  const offset = -indiceAtualHardSkills * 100;
-  carrosselInternoHardSkills.style.transform = `translateX(${offset}%)`;
-}
-
-function nextHardSkill() {
-  mostrarHardSkill(indiceAtualHardSkills + 1);
-}
-
-function prevHardSkill() {
-  mostrarHardSkill(indiceAtualHardSkills - 1);
-}
-
-// Carrossel dentro da div soft-skills
-
-let indiceAtualSoftSkills = 0;
-
-function mostrarSoftSkill(indice) {
-  const carrosselInternoSoftSkills = document.querySelector(
-    ".carrossel__interno-soft-skills"
-  );
-  const totalItensSoftSkills = document.querySelectorAll(
-    ".carrossel__item-soft-skills"
-  ).length;
-
-  if (indice >= totalItensSoftSkills) {
-    indiceAtualSoftSkills = 0;
-  } else if (indice < 0) {
-    indiceAtualSoftSkills = totalItensSoftSkills - 1;
-  } else {
-    indiceAtualSoftSkills = indice;
-  }
-
-  const offset = -indiceAtualSoftSkills * 100;
-  carrosselInternoSoftSkills.style.transform = `translateX(${offset}%)`;
-}
-
-function nextSoftSkill() {
-  mostrarSoftSkill(indiceAtualSoftSkills + 1);
-}
-
-function prevSoftSkill() {
-  mostrarSoftSkill(indiceAtualSoftSkills - 1);
-}
+  carrossel
+    .querySelector("[data-carrossel-next]")
+    .addEventListener("click", () => {
+      indiceAtual = mostrarCarrossel(
+        indiceAtual + 1,
+        carrosselInterno,
+        totalItens
+      );
+    });
+});
 
 //Barra de progresso da seção Skills
 
@@ -151,35 +99,92 @@ document.querySelectorAll(".soft-skill").forEach((skill) => {
 
 //    MUDAR IMAGEM DAS REDES SOCIAIS
 
-document.querySelectorAll(".redes-contato__item a").forEach((Link) => {
-  Link.addEventListener("mouseover", function () {
+function adicionarEventosDeImagem(link) {
+  link.addEventListener("mouseover", function () {
     const newImgSrc = this.getAttribute("data-newImg");
-    const imgElement = this.querySelector(".redes-contato__imagem");
+    const imgElement = this.querySelector("img");
     imgElement.src = newImgSrc;
   });
 
-  //voltar ao padrao
-
-  Link.addEventListener("mouseout", function () {
+  link.addEventListener("mouseout", function () {
     const defaultImgSrc = this.getAttribute("data-defaultImg");
-    const imgElement = this.querySelector(".redes-contato__imagem");
+    const imgElement = this.querySelector("img");
     imgElement.src = defaultImgSrc;
   });
-});
+}
+
+document
+  .querySelectorAll(".redes-contato__item a")
+  .forEach(adicionarEventosDeImagem);
+document.querySelectorAll(".rodape-redes a").forEach(adicionarEventosDeImagem);
 
 // Função para rolar a página até o topo
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Mostrar ou esconder o botão de voltar ao topo
+// Mostrar ou esconder o botão de voltar ao topo e mudar a cor conforme a seção
 window.addEventListener("scroll", function () {
   const backToTopButton = document.getElementById("back-to-top");
   const apresentacaoSection = document.getElementById("apresentacao");
+  const sections = document.querySelectorAll("section");
 
   if (window.scrollY > apresentacaoSection.offsetHeight) {
     backToTopButton.style.display = "block";
   } else {
     backToTopButton.style.display = "none";
   }
+
+  // Verificar se o botão está sobre uma seção com a cor de fundo igual à cor secundária
+  let isOverlapping = false;
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (
+      rect.top <= window.innerHeight &&
+      rect.bottom >= 0 &&
+      window.getComputedStyle(section).backgroundColor === "rgb(108, 117, 125)" // Cor secundária em RGB
+    ) {
+      isOverlapping = true;
+    }
+  });
+
+  // Verificar se o botão está sobre a seção curiosidade
+  const curiosidadeSection = document.getElementById("curiosidade");
+  const curiosidadeRect = curiosidadeSection.getBoundingClientRect();
+  const isOverCuriosidade =
+    curiosidadeRect.top <= window.innerHeight && curiosidadeRect.bottom >= 0;
+
+  if (isOverlapping && !isOverCuriosidade) {
+    backToTopButton.style.backgroundColor = "var(--primary-color)";
+  } else {
+    backToTopButton.style.backgroundColor = "var(--secondary-color)";
+  }
 });
+
+// MAPA INTERATIVO
+
+//Iniciando o mapa e definindo a visualização incial
+//L.map = cria o mapa
+var map = L.map("mapid").setView([-18.9186, -48.2772], 12); //coordenadas Uberlândia
+
+//Adicionando camada de tiles
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+//Adicionando marcadores
+var markerFaculdade = L.marker([-18.918300283324573, -48.25826208883107]).addTo(
+  map
+);
+markerFaculdade
+  .bindPopup(
+    "<b>UFU - Universidade Federal de Uberlândia</b><br>Faculdade que estou atualmente."
+  )
+  .openPopup();
+
+var markerIFTM = L.marker([-18.932655777167977, -48.28007040001174]).addTo(map);
+markerIFTM.bindPopup(
+  "<b>IFTM - Instituto Federal do Triângulo Mineiro Campus Centro</b><br>Onde fiz curso técnico de Redes de Computadores."
+);

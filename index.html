@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!--CSS do Leaflet para o mapa interativo-->
     <title>Home</title>
   </head>
   <body>
@@ -13,7 +15,7 @@
         <a href="#skills">Skills</a>
         <a href="#exp-projects">Experience & Projects</a>
         <a href="#contact">Contact</a>
-        <a href="">Interactive Element</a>
+        <a href="#IE">Interactive Element</a>
       </nav>
     </head>
     <main>
@@ -35,9 +37,16 @@
           alt="foto de perfil Matheus"
         />
       </section>
-      <div class="carrossel">
-        <div class="carrossel__interno">
-          <section id="trajetoria" class="carrossel__item">
+      <div data-carrossel class="carrossel__trajetoriaECuriosidade">
+        <div
+          data-carrossel-interno
+          class="carrossel__trajetoriaECuriosidade__interno"
+        >
+          <section
+            id="trajetoria"
+            data-carrossel-item
+            class="carrossel__trajetoriaECuriosidade__item"
+          >
             <h2 class="secao-titulo">Minha trajetória</h2>
             <p class="secao-texto">
               Minha jornada começa quando eu era mais novo, e comecei a
@@ -53,7 +62,6 @@
                 <div class="timeline__item">
                   <div class="timeline__conteudo">
                     <img
-                      class="carrossel__imagem"
                       src="assets/trajetoria/html-css-logo.png"
                       alt="logo-html-css"
                     />
@@ -67,7 +75,6 @@
                 <div class="timeline__item">
                   <div class="timeline__conteudo">
                     <img
-                      class="carrossel__imagem"
                       src="assets/trajetoria/iftm-redes-logo.png"
                       alt="logo-html-css"
                     />
@@ -81,7 +88,6 @@
                 <div class="timeline__item">
                   <div class="timeline__conteudo">
                     <img
-                      class="carrossel__imagem"
                       src="assets/trajetoria/ufu-si-logo.png"
                       alt="logo-html-css"
                     />
@@ -90,7 +96,11 @@
               </div>
             </div>
           </section>
-          <section id="curiosidade" class="carrossel__item">
+          <section
+            id="curiosidade"
+            data-carrossel-item
+            class="carrossel__trajetoriaECuriosidade__item"
+          >
             <h2 class="secao-titulo">Curiosidades</h2>
             <div class="curiosidade__conteudo">
               <div class="curiosidade__container">
@@ -137,10 +147,10 @@
             </div>
           </section>
         </div>
-        <button class="carrossel__controle__prev" onclick="prevSection()">
+        <button data-carrossel-prev class="carrossel__controle__prev">
           &#10094;
         </button>
-        <button class="carrossel__controle__next" onclick="nextSection()">
+        <button data-carrossel-next class="carrossel__controle__next">
           &#10095;
         </button>
       </div>
@@ -148,9 +158,12 @@
         <h2 class="secao-titulo">Minhas Skills</h2>
         <div class="skills__conteudo">
           <div class="hard-skills">
-            <div class="carrossel-hard-skills">
-              <div class="carrossel__interno-hard-skills">
-                <div class="carrossel__item-hard-skills">
+            <div data-carrossel class="carrossel-hard-skills">
+              <div
+                data-carrossel-interno
+                class="carrossel__interno-hard-skills"
+              >
+                <div data-carrossel-item class="carrossel__item-hard-skills">
                   <div class="linguagens">
                     <h3 class="secao-subtitulo">Linguagens de Programação</h3>
                     <!--Habilidades tecnicas-->
@@ -180,7 +193,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carrossel__item-hard-skills">
+                <div data-carrossel-item class="carrossel__item-hard-skills">
                   <div class="ferramentas">
                     <h3 class="secao-subtitulo">
                       Ferramentas de Desenvolvimento
@@ -205,7 +218,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carrossel__item-hard-skills">
+                <div data-carrossel-item class="carrossel__item-hard-skills">
                   <div class="tecnologias">
                     <h3 class="secao-subtitulo">Tecnologias</h3>
                     <div class="habilidade">
@@ -230,14 +243,14 @@
                 </div>
               </div>
               <button
-                class="carrossel__controle__prev-hard-skills"
-                onclick="prevHardSkill()"
+                data-carrossel-prev
+                class="carrossel__controle__prev carrossel__controle__prev-hard-skills"
               >
                 &#10094;
               </button>
               <button
-                class="carrossel__controle__next-hard-skills"
-                onclick="nextHardSkill()"
+                data-carrossel-next
+                class="carrossel__controle__next carrossel__controle__next-hard-skills"
               >
                 &#10095;
               </button>
@@ -245,9 +258,12 @@
           </div>
           <div class="soft-skills">
             <h3 class="secao-subtitulo">Habilidades Interpessoais</h3>
-            <div class="carrossel-soft-skills">
-              <div class="carrossel__interno-soft-skills">
-                <div class="carrossel__item-soft-skills">
+            <div data-carrossel class="carrossel-soft-skills">
+              <div
+                data-carrossel-interno
+                class="carrossel__interno-soft-skills"
+              >
+                <div data-carrossel-item class="carrossel__item-soft-skills">
                   <ul class="soft-skills__lista">
                     <li class="soft-skill">Escuta Ativa e Empatia</li>
                     <li class="soft-skill">
@@ -263,7 +279,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="carrossel__item-soft-skills">
+                <div data-carrossel-item class="carrossel__item-soft-skills">
                   <p class="soft-skills__texto">
                     Em projetos, a escuta ativa e a empatia são essenciais para
                     entender as necessidades dos clientes e alinhar as
@@ -293,14 +309,14 @@
                 </div>
               </div>
               <button
-                class="carrossel__controle__prev-soft-skills"
-                onclick="prevSoftSkill()"
+                data-carrossel-prev
+                class="carrossel__controle__prev-soft-skills carrossel__controle__prev"
               >
                 &#10094;
               </button>
               <button
-                class="carrossel__controle__next-soft-skills"
-                onclick="nextSoftSkill()"
+                data-carrossel-next
+                class="carrossel__controle__next-soft-skills carrossel__controle__next"
               >
                 &#10095;
               </button>
@@ -399,8 +415,8 @@
             />
             <p class="projetos__descricao">
               Jogo que criei com meu grupo na faculdade na matéria de
-              <strong>Algoritmos e Programação II</strong>, onde o fui desafiado
-              a trabalhar com ponteiros e funções.
+              <strong>Algoritmos e Programação II</strong>, onde fui desafiado a
+              trabalhar com ponteiros e funções.
             </p>
             <div class="projetos__tecnologia">
               <h4>Tecnologias usadas</h4>
@@ -486,10 +502,63 @@
           </div>
         </div>
       </section>
+      <section id="IE">
+        <div class="mapaInterativo">
+          <h2 class="secao-titulo">Onde estudo?</h2>
+          <div id="mapid"></div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="rodape-redes">
+        <a
+          href="https://www.instagram.com/matheusnleite/"
+          data-defaultImg="assets/redes_sociais/instagram-rodape.png"
+          data-newImg="assets/redes_sociais/instagram.png" target="_blank"
+        >
+          <img
+            src="assets/redes_sociais/instagram-rodape.png"
+            class="img-rodape"
+            alt="Instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/matheusnleite/"
+          data-defaultImg="assets/redes_sociais/linkedin-rodape.png"
+          data-newImg="assets/redes_sociais/linkedin.png" target="_blank"
+        >
+          <img
+            src="assets/redes_sociais/linkedin-rodape.png"
+            class="img-rodape"
+            alt="LinkedIn"
+          />
+        </a>
+        <a
+          href="https://github.com/matheusnleite"
+          data-defaultImg="assets/redes_sociais/github-rodape.png"
+          data-newImg="assets/redes_sociais/github.png" target="_blank"
+        >
+          <img
+            src="assets/redes_sociais/github-rodape.png"
+            class="img-rodape"
+            alt="GitHub"
+          />
+        </a>
+      </div>
+      <div class="rodape-links">
+        <p>Desenvolvido por Matheus Leite</p>
+        <p>|</p>
+        <a href="index.html">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#exp-projects">Experience & Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#IE">Interactive Element</a>
+      </div>
+    </footer>
     <button id="back-to-top" onclick="scrollToTop()">
       <img src="assets/arrow-up.png" alt="Voltar ao topo" />
     </button>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts/app.js"></script>
   </body>
 </html>
