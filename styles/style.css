@@ -611,3 +611,106 @@ footer {
   height: 24px;
   padding: 0 5px;
 }
+
+/* Responsividade para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+  /* Ajustes na Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .navbar a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Seção de Apresentação */
+  #apresentacao {
+    flex-direction: column;
+    padding: 5% 5%;
+    gap: 20px;
+  }
+  .apresentacao__conteudo, 
+  .apresentacao__imagem {
+    width: 100%;
+    text-align: center;
+  }
+  .apresentacao__imagem {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  /* Timeline e Carrossel */
+  .timeline {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .timeline__divisor {
+    display: none;
+  }
+  .carrossel__trajetoriaECuriosidade__item img {
+    max-width: 50%;
+  }
+  
+  /* Mapa Interativo */
+  #mapid {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+  }
+  
+  /* Seção Skills */
+  .skills__conteudo {
+    flex-direction: column;
+    gap: 20px;
+    padding: 2%;
+  }
+  
+  /* Seção Projetos */
+  .projetos {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .projetos__projeto {
+    margin: 10px auto;
+    width: 90%;
+  }
+  
+  /* Footer */
+  .rodape-redes {
+    position: static;
+    margin: 10px auto;
+  }
+  
+  /* Botão de Voltar ao Topo */
+  #back-to-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/* Responsividade para dispositivos com largura máxima de 480px */
+@media (max-width: 480px) {
+  .apresentacao__conteudo__titulo {
+    font-size: 1.8rem;
+  }
+  .apresentacao__conteudo__texto {
+    font-size: 1.2rem;
+  }
+  .secao-titulo {
+    font-size: 1.5rem;
+    padding-top: 2%;
+    padding-bottom: 20px;
+  }
+  .secao-subtitulo {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+  }
+  .projetos__descricao {
+    font-size: 1rem;
+  }
+}
