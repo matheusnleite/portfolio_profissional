@@ -15,24 +15,27 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   width: 100%;
   flex-direction: row;
   background-color: var(--primary-color);
-  padding: 1.25rem 0% 1.25rem 15%;
+  padding: 1.25rem 14%;
+  justify-content: left;
 }
 
 .navbar a {
   color: var(--tertiary-color);
   padding: 0.625rem;
-  margin-right: 1.625rem;
+  margin: 0.5rem;
   text-decoration: none;
   font-family: var(--fonte-primaria);
   font-size: 1.125rem;
@@ -49,6 +52,7 @@ body {
   border-color: var(--hover-color);
 }
 
+/* Apresentação */
 #apresentacao {
   display: flex;
   flex-direction: row;
@@ -59,11 +63,11 @@ body {
   padding: 5% 15%;
   gap: 50px;
 }
+
 .apresentacao__conteudo {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
   text-align: justify;
 }
@@ -86,6 +90,7 @@ body {
   border-radius: 50%;
 }
 
+/* Seções */
 .secao-titulo {
   font-family: var(--fonte-primaria);
   font-weight: 600;
@@ -110,6 +115,7 @@ body {
   margin: 0 10%;
 }
 
+/* Carrosséis, timelines e controles */
 .carrossel__trajetoriaECuriosidade {
   position: relative;
   width: 100%;
@@ -140,6 +146,7 @@ body {
   transform: translateY(-50%);
   background-color: var(--primary-color);
   color: white;
+
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -230,7 +237,7 @@ body {
   margin: 20px;
   border-radius: 8px;
   background-color: var(--hover-color);
-  color: var (--tertiary-color);
+  color: var(--tertiary-color);
 }
 
 .curiosidade__container {
@@ -259,6 +266,7 @@ body {
   width: 100%;
 }
 
+/* Skills */
 #skills {
   background-color: var(--primary-color);
   text-align: center;
@@ -318,7 +326,9 @@ body {
   transition: width 1.5s ease-in-out;
 }
 
-.carrossel-hard-skills {
+/* Carrossel Hard e Soft Skills */
+.carrossel-hard-skills,
+.carrossel-soft-skills {
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -326,12 +336,14 @@ body {
   border-radius: 8px;
 }
 
-.carrossel__interno-hard-skills {
+.carrossel__interno-hard-skills,
+.carrossel__interno-soft-skills {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.carrossel__item-hard-skills {
+.carrossel__item-hard-skills,
+.carrossel__item-soft-skills {
   min-width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -341,26 +353,6 @@ body {
 .carrossel__controle__prev-hard-skills,
 .carrossel__controle__next-hard-skills {
   top: 5%;
-}
-
-.carrossel-soft-skills {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.carrossel__interno-soft-skills {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carrossel__item-soft-skills {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  padding-top: 5%;
 }
 
 .carrossel__controle__prev-soft-skills,
@@ -401,6 +393,7 @@ body {
   transform: translateX(0);
 }
 
+/* Projetos */
 .projetos {
   display: flex;
   padding: 2%;
@@ -412,19 +405,13 @@ body {
   margin: 20px;
   border-radius: 8px;
   box-shadow: 15px 6px 4px var(--primary-color);
-  border-width: 5px;
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
-}
-
-.projetos__projeto {
-  text-align: center;
-  width: 100%;
-  margin: 0 3%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 
 .projetos__projeto img {
@@ -432,14 +419,8 @@ body {
   border-radius: 10px;
 }
 
-.projetos__projeto p,
-img {
-  margin-bottom: 5%;
-}
-
 .projetos__descricao {
   font-family: var(--fonte-secundaria);
-  columns: var(--primary-color);
   font-weight: 400;
   font-size: 1.2rem;
   width: 90%;
@@ -457,7 +438,7 @@ img {
 }
 
 .projetos__tecnologia__lista__item {
-  font-family: var (--fonte-secundaria);
+  font-family: var(--fonte-secundaria);
   color: var(--tertiary-color);
   font-weight: 500;
   font-size: 1rem;
@@ -480,7 +461,7 @@ img {
   font-weight: 600;
   background-color: var(--primary-color);
   padding: 20px 50px;
-  margin: 0 5px 0 5px;
+  margin: 0 5px;
   border-radius: 50px;
 }
 
@@ -488,6 +469,7 @@ img {
   background-color: var(--hover-color);
 }
 
+/* Contact */
 #contact {
   background-color: var(--quaternary-color);
 }
@@ -515,8 +497,7 @@ img {
   text-align: center;
   margin: 50px;
   padding: 20px 50px;
-  width: 100px;
-  border-width: 10px;
+  width: 200px;
   border: 5px solid transparent;
 }
 
@@ -531,6 +512,7 @@ img {
   margin-bottom: 25px;
 }
 
+/* Back to top */
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -553,6 +535,7 @@ img {
   background-color: var(--hover-color);
 }
 
+/* Mapa Interativo */
 #IE {
   background-color: var(--secondary-color);
 }
@@ -574,6 +557,7 @@ img {
   margin: 50px;
 }
 
+/* Footer */
 footer {
   background-color: var(--primary-color);
   padding: 10px 0;
@@ -607,90 +591,111 @@ footer {
 }
 
 .img-rodape {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: auto;
   padding: 0 5px;
 }
 
-/* Responsividade para dispositivos com largura máxima de 768px */
+/* Media Queries para Responsividade */
 @media (max-width: 768px) {
-  /* Ajustes na Navbar */
+  /* Navbar ajustada */
   .navbar {
-    flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
   }
   .navbar a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    margin: 0.3rem;
   }
-  
-  /* Seção de Apresentação */
+
+  /* Apresentação em coluna */
   #apresentacao {
     flex-direction: column;
     padding: 5% 5%;
-    gap: 20px;
-  }
-  .apresentacao__conteudo, 
-  .apresentacao__imagem {
-    width: 100%;
     text-align: center;
   }
+  .apresentacao__conteudo {
+    width: 100%;
+  }
   .apresentacao__imagem {
-    max-width: 200px;
-    margin: 0 auto;
-  }
-  
-  /* Timeline e Carrossel */
-  .timeline {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .timeline__divisor {
-    display: none;
-  }
-  .carrossel__trajetoriaECuriosidade__item img {
-    max-width: 50%;
-  }
-  
-  /* Mapa Interativo */
-  #mapid {
-    width: 90%;
-    height: 300px;
+    width: 80%;
     margin: 20px auto;
   }
-  
-  /* Seção Skills */
+
+  /*Trajetoria  e Curiosidade*/
+
+  .carrossel__trajetoriaECuriosidade .carrossel__controle__prev,
+  .carrossel__trajetoriaECuriosidade .carrossel__controle__next {
+    top: 10%;
+  }
+
+  /*Timeline*/
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .timeline__divisor {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline__item {
+    width: 30%;
+    text-align: center;
+  }
+
+  /* Ajuste em Skills e Projetos */
   .skills__conteudo {
     flex-direction: column;
     gap: 20px;
     padding: 2%;
   }
-  
-  /* Seção Projetos */
+  .hard-skills,
+  .soft-skills {
+    width: 90%;
+    margin: 0 auto;
+  }
   .projetos {
     flex-direction: column;
     gap: 20px;
   }
-  .projetos__projeto {
-    margin: 10px auto;
+  .projetos .projetos__projeto {
     width: 90%;
-  }
-  
-  /* Footer */
-  .rodape-redes {
-    position: static;
     margin: 10px auto;
   }
-  
-  /* Botão de Voltar ao Topo */
+
+  .redes-contato__item a {
+    width: 80px;
+    padding: 20px 10px;
+  }
+
+  /* Ajuste do mapa */
+  #mapid {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  /*Footer*/
+
+  footer {
+    padding: 20px;
+  }
+
+  footer .rodape-links {
+    flex-direction: row;
+    gap: 5px;
+    justify-content: right;
+    font-size: 0.7rem;
+  }
+
   #back-to-top {
-    right: 10px;
-    bottom: 10px;
+    right: 50px;
+    bottom: 40px;
   }
 }
 
-/* Responsividade para dispositivos com largura máxima de 480px */
 @media (max-width: 480px) {
   .apresentacao__conteudo__titulo {
     font-size: 1.8rem;
@@ -710,7 +715,108 @@ footer {
   .navbar a {
     font-size: 0.9rem;
   }
+
+  .timeline__item {
+    width: 70%;
+  }
+
+  /* Seção de Curiosidades: empilhar os containers verticalmente */
+  .curiosidade__conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* Ajuste dos containers individuais */
+  .curiosidade__container {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--hover-color);
+  }
+
+  /* Redução do tamanho do texto se necessário */
+  .curiosidade__subtexto {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  /* Ajuste das imagens para que não ultrapassem o container e fiquem centralizadas */
+  .curiosidade__imagem {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* Centraliza os títulos dos containers */
+  .curiosidade__container h3 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .carrossel__controle__prev-soft-skills,
+  .carrossel__controle__next-soft-skills {
+    top: 20%;
+  }
+
+  .carrossel__controle__prev-soft-skills {
+    left: -5px;
+  }
+  .carrossel__controle__next-soft-skills {
+    right: -5px;
+  }
+
   .projetos__descricao {
     font-size: 1rem;
+  }
+
+  .redes-contato__item {
+    width: 10px;
+  }
+
+  .redes-contato__item a {
+    margin: 10px 0;
+    padding: 10px;
+    width: auto;
+  }
+
+  .redes-contato__imagem {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  /*Footer*/
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Redes sociais: centraliza e ajusta margens */
+  .rodape-redes {
+    position: static;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rodape-redes img {
+    width: 24px;
+    height: auto;
+    margin: 0 5px;
+  }
+
+  /* Links do footer: empilha verticalmente e centraliza */
+  .rodape-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.6rem;
+  }
+
+  #back-to-top {
+    bottom: 60px;
   }
 }

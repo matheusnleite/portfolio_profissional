@@ -123,11 +123,11 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Mostrar ou esconder o botão de voltar ao topo e mudar a cor conforme a seção
+// Mostrar ou esconder o botão de voltar ao topo e mudar a cor conforme o objeto abaixo dele
 window.addEventListener("scroll", function () {
   const backToTopButton = document.getElementById("back-to-top");
   const apresentacaoSection = document.getElementById("apresentacao");
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll("section, footer");
 
   if (window.scrollY > apresentacaoSection.offsetHeight) {
     backToTopButton.style.display = "block";
@@ -135,7 +135,7 @@ window.addEventListener("scroll", function () {
     backToTopButton.style.display = "none";
   }
 
-  // Verificar se o botão está sobre uma seção com a cor de fundo igual à cor secundária
+  // Verificar se o botão está sobre um objeto com a cor de fundo igual à cor secundária
   let isOverlapping = false;
 
   sections.forEach((section) => {
